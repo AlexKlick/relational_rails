@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   #D
   get '/nbateams', to: 'nbateams#index'
-
+  get '/nbateams/:id', to: "nbateams#show"
 
 
   #A

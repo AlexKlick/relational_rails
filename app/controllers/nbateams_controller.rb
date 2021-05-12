@@ -1,5 +1,9 @@
 class NbateamsController < ApplicationController
   def index
-        
-  end     
+    @nbateams = Nbateam.all    
+  end 
+  
+  def show
+    @nbateam = Nbateam.find(params[:id])
+  end
 end

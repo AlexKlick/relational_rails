@@ -1,1 +1,6 @@
 <h1>Nba Teams</h1>
+<% @nbateams.each do |nbateam| %>
+<h3><%= nbateam.city%>  <%= nbateam.name %></h3> 
+<p>Roster Size: <%= nbateam.number_of_players %></p>
+<p>Going to the Playoffs: <%= nbateam.playoff_ready %></p>
+<% end %>
