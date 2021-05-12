@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_12_002424) do
+ActiveRecord::Schema.define(version: 2021_05_12_134911) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,13 +24,26 @@ ActiveRecord::Schema.define(version: 2021_05_12_002424) do
     t.datetime "updated_at", null: false
   end
 
-  # create_table "teams", force: :cascade do |t|
-  #   t.string "name"
-  #   t.string "city"
-  #   t.integer "number_of_players"
-  #   t.boolean "playoff_ready"
-  #   t.datetime "created_at", null: false
-  #   t.datetime "updated_at", null: false
-  # end
+  create_table "players", force: :cascade do |t|
+    t.string "name"
+    t.string "position"
+    t.integer "age"
+    t.integer "height"
+    t.boolean "injured"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "nbateam_id"
+    t.index ["nbateam_id"], name: "index_players_on_nbateam_id"
+  end
 
+  create_table "teams", force: :cascade do |t|
+    t.string "name"
+    t.string "city"
+    t.integer "number_of_players"
+    t.boolean "playoff_ready"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "players", "nbateams"
 end

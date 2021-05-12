@@ -4,9 +4,9 @@ Rails.application.routes.draw do
   get '/', to: 'hello#index'
 
   #D
-  get '/nbateams', to: 'nbateams#index'
+  get '/nbateams',     to: 'nbateams#index'
   get '/nbateams/:id', to: "nbateams#show"
-
+  get '/players/',     to: 'players#index'
 
   #A
 end
