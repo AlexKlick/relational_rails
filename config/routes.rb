@@ -7,6 +7,14 @@ Rails.application.routes.draw do
   get '/nbateams',     to: 'nbateams#index'
   get '/nbateams/:id', to: "nbateams#show"
   get '/players/',     to: 'players#index'
+  get '/players/',     to: 'players#show'
 
+
+
+
+
+
+
+  
   #A
 end
