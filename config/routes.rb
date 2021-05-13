@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # get '/nbateams/:id', to: "nbateams#show"
   resources :nbateams, only: [:index,:show, :new, :create] 
   get '/players/',     to: 'players#index'
-  get '/players/',     to: 'players#show'
+  get '/players/:id',     to: 'players#show'
 
 
 

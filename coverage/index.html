@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-05-12T21:36:53-06:00">2021-05-12T21:36:53-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-05-12T23:11:39-06:00">2021-05-12T23:11:39-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  100.0%
+  98.28%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
-       <span class="green">
-         1.02
+       <span class="yellow">
+         1.0
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>56</b> relevant lines,
-    <span class="green"><b>56</b> lines covered</span> and
-    <span class="red"><b>0</b> lines missed. </span>
+    <b>58</b> relevant lines,
+    <span class="green"><b>57</b> lines covered</span> and
+    <span class="red"><b>1</b> lines missed. </span>
     (<span class="green">
-  100.0%
+  98.28%
 </span>
 )
   </div>
@@ -83,12 +83,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#8923092fbdbcd197501a8f62f2ac9fb374857476" class="src_link" title="app/controllers/players_controller.rb">app/controllers/players_controller.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="red strong cell--number t-file__coverage">80.00 %</td>
+            <td class="cell--number">9</td>
             <td class="cell--number">5</td>
-            <td class="cell--number">3</td>
-            <td class="cell--number">3</td>
-            <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">1</td>
+            <td class="cell--number">0.80</td>
             
           </tr>
         
@@ -364,8 +364,8 @@
   <div class="header">
     <h3>app/controllers/players_controller.rb</h3>
     <h4>
-      <span class="green">
-  100.0%
+      <span class="red">
+  80.0%
 </span>
 
       lines covered
@@ -374,9 +374,9 @@
     
 
     <div class="t-line-summary">
-      <b>3</b> relevant lines.
-      <span class="green"><b>3</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>5</b> relevant lines.
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
 
     
@@ -432,6 +432,50 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="5">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def show</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="7">
+            
+            
+
+            
+
+            <code class="ruby">    @player = Player.find(params[:id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
             
             
 
@@ -3294,7 +3338,7 @@
 
             
 
-            <code class="ruby">  get &#39;/players/&#39;,     to: &#39;players#show&#39;</code>
+            <code class="ruby">  get &#39;/players/:id&#39;,     to: &#39;players#show&#39;</code>
           </li>
         </div>
       
