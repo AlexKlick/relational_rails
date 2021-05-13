@@ -1,1 +1,7 @@
 <h1>Players</h1>
+<% @players.each do |player| %>
+<h3><%= player.name %></h3> 
+<p>Position: <%= player.position %></p>
+<p>Height in inches: <%= player.height %></p>
+<p>Injury Status: <%= player.injured %></p>
+<% end %>
