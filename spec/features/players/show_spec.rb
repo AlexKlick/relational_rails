@@ -7,7 +7,7 @@ RSpec.describe 'As a visitor', type: :feature do
           @k_garrnet = @celtics.players.create!(name: "Kevin Garrnet", position: "pf", age: 35, height: 83.0, injured: true)
           @rondo     = @celtics.players.create!(name: "Rajon Rondo", position: "pg", age: 35, height: 73.0, injured: false)
         end
-        # User Story 3
+        # User Story 4
         it 'I see each Child in the system including the Childs attributes:' do
             visit players_path(@k_garrnet)
             
