@@ -274,7 +274,7 @@
           1,
           null,
           null,
-          1,
+          null,
           null
         ]
       },
@@ -284,34 +284,8 @@
           1,
           null
         ]
-      },
-      "/Users/dee/turing/2module/projects/relational_rails/app/models/player.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/dee/turing/2module/projects/relational_rails/app/controllers/players_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/dee/turing/2module/projects/relational_rails/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
       }
     },
-    "timestamp": 1620882699
+    "timestamp": 1620916273
   }
 }
