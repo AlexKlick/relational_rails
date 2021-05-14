@@ -1,5 +1,5 @@
 class MountainsController < ApplicationController
     def index
-        @ranges = MountainRange.all
+        @mountains = Mountain.all
     end
 end
