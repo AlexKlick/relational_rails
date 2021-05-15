@@ -4,7 +4,11 @@ class MountainRangesController < ApplicationController
     end
 
     def show
-        #binding.pry
         @range = MountainRange.find(params[:id])
+    end
+
+    def mountain_index
+        @range = MountainRange.find(params[:id])
+        @mountains = Mountain.where("mountain_range_id = #{params[:id]}" )
     end
 end
