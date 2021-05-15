@@ -17,15 +17,3 @@ RSpec.describe 'the mountain index page' do
     end
 
 end
-RSpec.describe 'the mountain index page' do
-        # User Story 4, Child Show (x2)
-
-    # As a visitor
-    # When I visit '/child_table_name/:id'
-    # Then I see the child with that id including the child's attributes:
-    it 'displays the mountain name' do
-        range = Mountain.create(name:'Aconcagua', height_m: 6960, skiable:true)
-        range2 = Mountain.create(name:'Mount Sneffels', height_m: 4315, skiable:true)
-        visit "/ranges/#{range.id}"
-    end
-end

@@ -1,0 +1,16 @@
+<h1 style="text-align: center"><%= @mountain.name%></h1>
+<table class="table table-sm table-bordered">
+  <tr>
+    <th scope="row" style="text-align: center">Height (M)</th>
+    <th scope="row" style="text-align: center">Skiable?</th>
+  </tr>
+  <tr>
+    <td style="text-align: center"><%= @mountain.height_m%></td>
+    <td
+      style="text-align: center"
+      class="<%= @mountain.skiable == true ? 'bg-success' : 'bg-danger' %>"
+    >
+      <%= @mountain.skiable%>
+    </td>
+  </tr>
+</table>
