@@ -1,6 +1,6 @@
 class MountainRangesController < ApplicationController
     def index
-        @ranges = MountainRange.all
+        @ranges = MountainRange.all.order(created_at: :desc)
     end
 
     def show
