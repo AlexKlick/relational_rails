@@ -5,6 +5,7 @@ class MountainRangesController < ApplicationController
 
     def show
         @range = MountainRange.find(params[:id])
+        @mtn_count = Mountain.where("mountain_range_id = #{params[:id]}").count
     end
 
     def mountain_index
