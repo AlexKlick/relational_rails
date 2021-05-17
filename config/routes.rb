@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   resources :nbateams, only: [:index,:show, :new, :create] 
   get '/players/',     to: 'players#index'
   get '/players/:id',     to: 'players#show'
-
-
+  get '/nbateams/:nba_id/players', to: 'nba_players#index' 
+  
 
 
 
