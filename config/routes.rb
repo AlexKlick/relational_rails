@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   patch '/nbateams/:nba_id',       to: 'nbateams#update' 
   get '/nbateams/:nba_id/players/new', to: 'nba_players#new'
   post '/nbateams/:nba_id/players', to: 'nba_players#create' 
-
+  
 
 
   
