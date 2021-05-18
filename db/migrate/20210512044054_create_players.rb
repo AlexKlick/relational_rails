@@ -4,7 +4,7 @@ class CreatePlayers < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :position
       t.integer :age
-      t.integer :height
+      t.float :height
       t.boolean :injured
 
       t.timestamps

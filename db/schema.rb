@@ -46,14 +46,14 @@ ActiveRecord::Schema.define(version: 2021_05_13_201304) do
     t.string "name"
     t.string "position"
     t.integer "age"
-    t.integer "height"
+    t.float "height"
     t.boolean "injured"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "nbateam_id"
     t.index ["nbateam_id"], name: "index_players_on_nbateam_id"
   end
-
+  
   add_foreign_key "mountains", "mountain_ranges"
   add_foreign_key "players", "nbateams"
 end
