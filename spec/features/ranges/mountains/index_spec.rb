@@ -5,11 +5,11 @@ RSpec.describe 'the ranges mountain index page' do
     
     end
 
-# User Story 5, Parent Children Index (x2)
+    # User Story 5, Parent Children Index (x2)
 
-# As a visitor
-# When I visit '/parents/:parent_id/child_table_name'
-# Then I see each Child that is associated with that Parent with each Child's attributes:
+    # As a visitor
+    # When I visit '/parents/:parent_id/child_table_name'
+    # Then I see each Child that is associated with that Parent with each Child's attributes:
 
     it 'shows all of the mountains associated with the range' do
         range = MountainRange.create(name:'Andes', length_km: 7000, western_hemisphere:true)
@@ -21,4 +21,5 @@ RSpec.describe 'the ranges mountain index page' do
         expect(page).to have_content(mountain.name)
         expect(page).to have_content(mountain2.name)
     end
+
 end

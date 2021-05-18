@@ -1,268 +1,24 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/config/environment.rb": {
-        "lines": [
-          null,
-          1,
-          null,
-          null,
-          1
-        ]
-      },
-      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/config/application.rb": {
+      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/app/channels/application_cable/channel.rb": {
         "lines": [
           1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           1,
           null,
           null
         ]
       },
-      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/config/boot.rb": {
+      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/app/channels/application_cable/connection.rb": {
         "lines": [
           1,
-          null,
           1,
-          1
-        ]
-      },
-      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/config/environments/test.rb": {
-        "lines": [
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
           null,
           null
         ]
       },
-      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/config/initializers/application_controller_renderer.rb": {
+      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/app/controllers/application_controller.rb": {
         "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/config/initializers/assets.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/config/initializers/backtrace_silencers.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/config/initializers/content_security_policy.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/config/initializers/cookies_serializer.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          1
-        ]
-      },
-      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/config/initializers/filter_parameter_logging.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          1
-        ]
-      },
-      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/config/initializers/inflections.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/config/initializers/mime_types.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/config/initializers/wrap_parameters.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          2,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/config/routes.rb": {
-        "lines": [
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
           1,
           null
         ]
@@ -272,8 +28,130 @@
           1,
           null
         ]
+      },
+      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/app/controllers/hello_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/app/controllers/mountain_ranges_controller.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/app/controllers/mountains_controller.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/app/controllers/nbateams_controller.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/app/controllers/players_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/app/jobs/application_job.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/app/mailers/application_mailer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/app/models/mountain.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/app/models/mountain_range.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/app/models/nbateam.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/alexmac/Documents/turing/mod_2/projects/relational_rails/app/models/player.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1620937035
+    "timestamp": 1621295537
   }
 }

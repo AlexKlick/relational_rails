@@ -1,5 +1,9 @@
-<h1 style="text-align: center"><%= @range.name%> Mountain Range</h1>
-<h3>Mountains in range: <%= @mtn_count %></h3>
+<h1 style="text-align: center"><%= @range.name %> Mountain Range</h1>
+<p>
+  <a class="btn btn-secondary" href="/mountain_ranges/<%= @range.id %>/mountains">see the mountains!</a>
+  <a class="btn btn-secondary" href="/mountain_ranges/<%= @range.id %>/edit">Update Range</a>
+</p>
+<h3>Mountains in range: <%= @mtn_count %></a></h3>
 <table class="table table-sm table-bordered">
   <tr>
     <th scope="row" style="text-align: center">Length</th>
@@ -15,4 +19,3 @@
     </td>
   </tr>
 </table>
-

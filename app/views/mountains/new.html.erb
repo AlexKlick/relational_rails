@@ -1,0 +1,10 @@
+<h1>Create A New Mountain</h1>
+<%= bootstrap_form_tag url: '/mountains', method: :post do |form| %>
+    <%= form.text_field :Mountain_name %>
+    <%= form.number_field :height_m %>
+    <%= form.form_group :skiable, label: { text: "Can it be skied?" } do %>
+        <%= form.radio_button :skiable, true, label:"true" %>
+        <%= form.radio_button :skiable, false, label:"false"%>
+    <% end %>
+    <%= form.submit 'Submit' %>
+<% end %>

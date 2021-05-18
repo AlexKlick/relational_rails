@@ -17,10 +17,26 @@ Rails.application.routes.draw do
 
   
   #A
+  #read ranges
   get '/mountain_ranges', to: 'mountain_ranges#index'
+  #create range
+  get '/mountain_ranges/new', to: 'mountain_ranges#new'
+  post '/mountain_ranges', to: 'mountain_ranges#create'
+  #read single range
   get "/mountain_ranges/:id", to: 'mountain_ranges#show'
-  get "/mountain_ranges/:id/mountains", to: 'mountain_ranges#mountain_index'
-
+  #edit a range
+  get '/mountain_ranges/:id/edit', to: 'mountain_ranges#edit'
+  patch '/mountain_ranges/:id', to: 'mountain_ranges#update'
+  #mountains in a range
+  get "/mountain_ranges/:mountain_range_id/mountains", to: 'range_mountains#index'
+  #create mountain
+  get '/mountains/new', to: 'mountains#new'
+  post '/mountains', to: 'mountains#create'
+  #read all mountains
   get '/mountains', to: 'mountains#index'
+  #read single mountain
   get '/mountains/:id', to: 'mountains#show'
+  #edit single mountain
+  get '/mountains/:id/edit', to: 'mountains#edit'
+  patch '/mountains/:id', to: 'mountains#update'
 end
