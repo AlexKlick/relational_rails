@@ -5,13 +5,14 @@ Rails.application.routes.draw do
   root 'hello#index' 
   #D
   # get '/nbateams',     to: 'nbateams#index'
-  # get '/nbateams/:id', to: "nbateams#show"
-  resources :nbateams, only: [:index,:show, :new, :create] 
-  get '/players/',     to: 'players#index'
-  get '/players/:id',     to: 'players#show'
+  # get '/nbateams/:id', to: "nbateams#show" 
+  # post '/nbateams',    to: 'nbateams#create'  
+  resources :nbateams, only: [:index, :show, :new, :create, :edit] 
+  get '/players/',                 to: 'players#index'
+  get '/players/:id',              to: 'players#show'
   get '/nbateams/:nba_id/players', to: 'nba_players#index' 
+  patch '/nbateams/:nba_id',       to: 'nbateams#update' 
   
-
 
 
 

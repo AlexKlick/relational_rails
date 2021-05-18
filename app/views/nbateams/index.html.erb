@@ -5,6 +5,7 @@
 <p>Going to the Playoffs: <%= nbateam.playoff_ready %></p> 
 <p>Created at: <%= nbateam.created_at %></p> 
 <p>Current Roster: <%= nbateam.players.count %></p>
+<%= button_to "Edit #{nbateam.name}", url= "/nbateams/#{nbateam.id}/edit", method: :get %>
 <% end %>
 
 <a href="nbateams/new"> Create NBA Team </a>
