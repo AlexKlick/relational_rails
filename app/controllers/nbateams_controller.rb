@@ -24,7 +24,8 @@ class NbateamsController < ApplicationController
     nbateam.update(nbateam_params)
     redirect_to "/nbateams"
   end
-
+  
+  private
   def nbateam_params
     params.permit(:name, :city, :number_of_players, :playoff_ready)
   end 

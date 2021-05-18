@@ -9,7 +9,7 @@ RSpec.describe 'the NBA Team creation' do
     expect(current_path).to eq('/nbateams/new')
   end 
 
-  it 'can create a new NBA Team' do  
+  it 'can update a new NBA Team' do  
     visit '/nbateams/new'
     
     fill_in('Name', with: 'Kings')
