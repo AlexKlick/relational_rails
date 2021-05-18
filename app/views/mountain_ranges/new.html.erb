@@ -1,0 +1,10 @@
+<h1>Create A New Mountain Range</h1>
+<%= bootstrap_form_tag url: '/mountain_ranges', method: :post do |form| %>
+    <%= form.text_field :range_name %>
+    <%= form.number_field :length_km %>
+    <%= form.form_group :western_hemisphere, label: { text: "Located in Western Hemisphere?" } do %>
+        <%= form.radio_button :western_hemisphere, true, label:"true" %>
+        <%= form.radio_button :western_hemisphere, false, label:"false"%>
+    <% end %>
+    <%= form.submit 'Submit' %>
+<% end %>
