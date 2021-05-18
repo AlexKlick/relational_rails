@@ -1,0 +1,20 @@
+<h1 style="text-align: center">Mountains of the <%= @range.name %></h1>
+<table class="table table-bordered">
+  <tr>
+    <th style="text-align: center">Name</th>
+    <th style="text-align: center">Height (M)</th>
+    <th style="text-align: center">Skiable?</th>
+  </tr>
+  <% @mountains.each do |mountain| %>
+  <tr>
+    <td style="text-align: center"><%= mountain.name%> <a class="btn btn-link mr-auto" href="/mountain_ranges/<%= @range.id%>/mountains/<%= mountain.id %>/edit">edit</a></td>
+    <td style="text-align: center"><%= mountain.height_m%></td>
+    <td
+      style="text-align: center"
+      class="<%= mountain.skiable == true ? 'bg-success' : 'bg-danger' %>"
+    >
+      <%= mountain.skiable%>
+    </td>
+  </tr>
+  <% end %>
+</table>

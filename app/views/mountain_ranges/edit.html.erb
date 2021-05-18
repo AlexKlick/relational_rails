@@ -1,0 +1,10 @@
+<h1>Update <%= @range.name %></h1>
+<%= bootstrap_form_tag url: "/mountain_ranges/#{@range.id}", method: :patch do |form| %>
+    <%= form.text_field :range_name, value: @range.name %>
+    <%= form.number_field :length_km, value: @range.length_km %>
+    <%= form.form_group :western_hemisphere, label: { text: "Located in Western Hemisphere?" }, value: @range.western_hemisphere do %>
+        <%= form.radio_button :western_hemisphere, true, label:"true", checked: @range.western_hemisphere ? true : false %>
+        <%= form.radio_button :western_hemisphere, false, label:"false", checked: @range.western_hemisphere ? false : true%>
+    <% end %>
+    <%= form.submit 'Submit' %>
+<% end %>

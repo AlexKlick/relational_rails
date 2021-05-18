@@ -10,10 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_12_134911) do
+ActiveRecord::Schema.define(version: 2021_05_13_201304) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "mountain_ranges", force: :cascade do |t|
+    t.string "name"
+    t.integer "length_km"
+    t.boolean "western_hemisphere"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "mountains", force: :cascade do |t|
+    t.string "name"
+    t.integer "height_m"
+    t.boolean "skiable"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "mountain_range_id"
+    t.index ["mountain_range_id"], name: "index_mountains_on_mountain_range_id"
+  end
 
   create_table "nbateams", force: :cascade do |t|
     t.string "name"
@@ -35,6 +53,7 @@ ActiveRecord::Schema.define(version: 2021_05_12_134911) do
     t.bigint "nbateam_id"
     t.index ["nbateam_id"], name: "index_players_on_nbateam_id"
   end
-
+  
+  add_foreign_key "mountains", "mountain_ranges"
   add_foreign_key "players", "nbateams"
 end
