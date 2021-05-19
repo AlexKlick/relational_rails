@@ -1,6 +1,7 @@
 <h1 style="text-align: center"><%= @range.name %> Mountain Range</h1>
 <p>
   <a class="btn btn-secondary" href="/mountain_ranges/<%= @range.id %>/mountains">see the mountains!</a>
+  <%=link_to "see the mountains", "/mountain_ranges/#{@range.id}/mountains"%>
   <a class="btn btn-secondary" href="/mountain_ranges/<%= @range.id %>/edit">Update Range</a>
   <a class="btn btn-secondary" href="/mountain_ranges/<%=@range.id %>/mountains/new">Create Mountain</a>
 </p>

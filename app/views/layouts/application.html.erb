@@ -2,15 +2,12 @@
 <html>
   <head>
     <title>Relational Rails</title>
-    <link href="bootstrap-sortable.css" rel="stylesheet" type="text/css" />
     <%= csrf_meta_tags %> <%= csp_meta_tag %> <link
     href=https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css
     rel=stylesheet> <link
     href=https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.20/css/dataTables.bootstrap4.min.css
     rel=stylesheet> <%= stylesheet_link_tag 'application', media: 'all' %> <%=
     javascript_include_tag 'application' %>
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="bootstrap-sortable.js"></script>
   </head>
 
   <body>
@@ -72,16 +69,16 @@
       </div>
     </nav>
     <div class="container">
+      <% flash.each do |name, msg| %>
+      <div class="row justify-content-center">
+        <div class="col-auto alert alert-warning"><%= msg %></div>
+      </div>
+      <% end %>
       <div class="row justify-content-center">
         <div class="col-sm-auto"><%= yield %></div>
       </div>
     </div>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"

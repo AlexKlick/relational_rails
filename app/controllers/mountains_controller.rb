@@ -1,6 +1,6 @@
 class MountainsController < ApplicationController
     def index
-        @mountains = Mountain.all
+        @mountains = Mountain.where(skiable: true)
     end
     def create
         binding.pry

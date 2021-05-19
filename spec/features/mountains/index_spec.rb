@@ -27,4 +27,14 @@ RSpec.describe 'the mountain index page' do
     it 'has a link on every page of the site to the mountains index' do
         
     end
+
+    #     User Story 15, Child Index only shows `true` Records (x2)
+
+    # As a visitor
+    # When I visit the child index
+    # Then I only see records where the boolean column is `true`
+
+    it 'has only records where skiable is true' do
+        
+    end
 end

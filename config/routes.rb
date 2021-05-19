@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   get '/mountain_ranges/:id/edit', to: 'mountain_ranges#edit'
   patch '/mountain_ranges/:id', to: 'mountain_ranges#update'
   #mountains in a range
-  get "/mountain_ranges/:mountain_range_id/mountains", to: 'range_mountains#index'
+  get "/mountain_ranges/:mountain_range_id/mountains", to: 'range_mountains#index', as: :mountains_in_range
   #add new mountain to range
   get "/mountain_ranges/:mountain_range_id/mountains/new", to: 'range_mountains#new'
   post "/mountain_ranges/:mountain_range_id/mountains", to: 'range_mountains#create'
@@ -45,6 +45,6 @@ Rails.application.routes.draw do
   #read single mountain
   get '/mountains/:id', to: 'mountains#show'
   #edit single mountain
-  get '/mountains/:id/edit', to: 'mountains#edit'
+  get '/mountains/:id/edit', to: 'mountains#edit', as: :edit_mountain
   patch '/mountains/:id', to: 'mountains#update'
 end
