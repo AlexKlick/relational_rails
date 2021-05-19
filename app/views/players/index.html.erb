@@ -5,4 +5,5 @@
   <p>Age: <%= player.age %> </p>
   <p>Height in inches: <%= player.height %></p>
   <p>Injury Status: <%= player.injured %></p>
+  <%= button_to "Delete", url= "/players/#{player.id}", method: :delete %>
 <% end %>

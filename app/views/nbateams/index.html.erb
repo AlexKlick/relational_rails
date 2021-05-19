@@ -1,4 +1,6 @@
 <h1>Nba Teams</h1>
+<a href="nbateams/new"> Create NBA Team </a>
+
 <% @nbateams.each do |nbateam| %>
 <h3><%= nbateam.city%>  <%= nbateam.name %></h3> 
 <p>Roster Size: <%= nbateam.number_of_players %></p>
@@ -6,6 +8,6 @@
 <p>Created at: <%= nbateam.created_at %></p> 
 <p>Current Roster: <%= nbateam.players.count %></p>
 <%= button_to "Edit #{nbateam.name}", url= "/nbateams/#{nbateam.id}/edit", method: :get %>
+<%= button_to "Delete Team", url= "/nbateams/#{nbateam.id}", method: :delete %>
 <% end %>
 
-<a href="nbateams/new"> Create NBA Team </a>

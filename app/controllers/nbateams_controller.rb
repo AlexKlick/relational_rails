@@ -24,6 +24,12 @@ class NbateamsController < ApplicationController
     nbateam.update(nbateam_params)
     redirect_to "/nbateams"
   end
+
+  def destroy
+    nbateam = Nbateam.find(params[:id])
+    nbateam.destroy
+    redirect_to nbateams_path    
+  end
   
   private
   def nbateam_params
