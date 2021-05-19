@@ -1,8 +1,8 @@
-<h1> New NBA Player </h1>
+<h1> Edit NBA Player </h1>
 
-<!-- <%= render partial: "player_form", locals: {model: @player, url: nba_players_path(@nbateam)} %> -->
+<!-- <%= render partial: "player_form", locals: {model: @player, url: player_show_path(@player.id)}  %> -->
 
-<%= form_with url: nba_players_path(@nbateam), method: :post, local: true do |form| %>
+<%= form_with url: player_show_path(@player.id), method: :patch, local: true do |form| %>
   <%= form.label :name %>
   <%= form.text_field :name %> 
   <%= form.label :position %>

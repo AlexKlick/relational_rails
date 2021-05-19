@@ -6,20 +6,25 @@ RSpec.describe 'the Player creation' do
     @nuggets = Nbateam.create!(name: "Nuggets", city: "Denver", number_of_players: 17, playoff_ready: true)    
   end
 
-  it 'links to the new page from the NBA/Player index' do
-    visit "/nbateams/#{@nuggets.id}/players"    
+  it 'I see a link to create player' do
+    visit nba_players_path(@nuggets)     
+    
+    expect(page).to have_link("Create Player")
 
     click_link('Create Player') 
-    expect(current_path).to eq("/nbateams/#{@nuggets.id}/players/new")
-  end 
 
-  xit 'can update a new NBA Team' do  
-    visit '/nbateams/new'
+    expect(current_path).to eq(new_nba_player_path(@nuggets))
+    expect(page).to have_content("New NBA Player")
     
-    fill_in('Name', with: 'Kings')
-    click_button('Create NBA Team')
+    fill_in 'name', with: 'Will Barton'
+    fill_in 'position', with: 'SG'
+    fill_in 'age', with: 27
+    fill_in 'height', with: 84.0
+    fill_in 'injured', with: true
 
-    expect(current_path).to eq("/nbateams")
-    expect(page).to have_content("Kings")
-  end
+    click_button 'Submit'
+    
+    expect(current_path).to eq(nba_players_path(@nuggets))
+    expect(page).to have_content('Will Barton')
+  end 
 end 

@@ -1,12 +1,13 @@
+<h1>  <%="#{@nbateam.name}"%> Players   </h1>
 
 <% @players.each do |player|%>
-
+ 
   <%= link_to player.name, "/players/#{player.id}" %>
-  <p>Position: <%= player.position %></p>
-  <p>Age: <%= player.age %></p>
-  <p>Height in inches: <%= player.height %></p>
-  <p>Injury Status: <%= player.injured %></p>
+  <li>Position: <%= player.position %></li>
+  <li>Age: <%= player.age %></li>
+  <li>Height in inches: <%= player.height %></li>
+  <li>Injury Status: <%= player.injured %></li>
 
 <% end %>
-
-  <a href= <%"nbateams/#{@nbateam.id}/players/new" %>> Create Player </a>
+  
+  <%= link_to "Create Player", new_nba_player_path(@nbateam) %>

@@ -9,13 +9,13 @@ Rails.application.routes.draw do
   # post '/nbateams',    to: 'nbateams#create'  
   resources :nbateams, only: [:index, :show, :new, :create, :edit] 
   get '/players/',                 to: 'players#index'
-  get '/players/:id',              to: 'players#show'
-  get '/nbateams/:nba_id/players', to: 'nba_players#index' 
+  get '/players/:id',              to: 'players#show', as: 'player_show'
+  get '/nbateams/:nba_id/players', to: 'nba_players#index', as: 'nba_players' 
   patch '/nbateams/:nba_id',       to: 'nbateams#update' 
-  get '/nbateams/:nba_id/players/new', to: 'nba_players#new'
+  get '/nbateams/:nba_id/players/new', to: 'nba_players#new', as: 'new_nba_player'
   post '/nbateams/:nba_id/players', to: 'nba_players#create' 
-  
-
+  get  '/players/:id/edit', to: 'players#edit', as: 'edit_player' 
+  patch '/players/:id', to: 'players#update' 
 
   
   #A

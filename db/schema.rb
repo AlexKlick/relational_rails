@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 2021_05_13_201304) do
     t.bigint "nbateam_id"
     t.index ["nbateam_id"], name: "index_players_on_nbateam_id"
   end
-  
+
   add_foreign_key "mountains", "mountain_ranges"
   add_foreign_key "players", "nbateams"
 end
