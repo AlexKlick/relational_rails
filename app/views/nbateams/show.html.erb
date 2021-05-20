@@ -3,3 +3,5 @@
 <h1><%= @nbateam.city%>  <%= @nbateam.name %><h1>
 <p>Roster Size: <%= @nbateam.number_of_players %></p>
 <p>Going to the Playoffs: <%= @nbateam.playoff_ready %></p>
+<p><%= button_to "Delete Team", url= "/nbateams/#{@nbateam.id}", method: :delete %></p>
+<%= link_to "#{@nbateam.name}", player_show_path(@nbateam) %>

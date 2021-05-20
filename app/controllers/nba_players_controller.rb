@@ -11,9 +11,14 @@ class NbaPlayersController < ApplicationController
   def create
     nbateam = Nbateam.find(params[:nba_id])
     @player = nbateam.players.create(player_params)
-    redirect_to "/nbateams/#{@player.nbateam_id}/players"  
+    redirect_to nba_players_path(nbateam)   
   end
-  
+
+  def edit
+    @nbateam = Nbateam.find(params[:nba_id])    
+    @players = Player.find(params[:player_id])
+  end
+
   private
   def player_params
     params.permit(:name, :position, :age, :height, :injured)

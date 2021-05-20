@@ -3,19 +3,24 @@ require 'rails_helper'
 RSpec.describe 'the NBA Team creation' do
 #User Story 11  
   it 'links to the new page from the nba index' do
-    visit '/nbateams'    
-
-    click_link('Create NBA Team') 
-    expect(current_path).to eq('/nbateams/new')
-  end 
-
-  it 'can update a new NBA Team' do  
-    visit '/nbateams/new'
+    visit nbateams_path    
     
-    fill_in('Name', with: 'Kings')
-    click_button('Create NBA Team')
+    expect(page).to have_link('Create NBA Team')
+    
+    click_link('Create NBA Team') 
+     
+    expect(current_path).to eq(new_nbateam_path)
 
-    expect(current_path).to eq("/nbateams")
-    expect(page).to have_content("Kings")
-  end
+    expect(page).to have_content("New Team")
+
+    fill_in 'name', with: 'Nets'      
+    fill_in 'city', with: 'Jersey'
+    fill_in 'number_of_players', with: 17
+    fill_in 'playoff_ready', with: true
+
+    click_button('Submit')
+    
+    expect(current_path).to eq(nbateams_path)
+    expect(page).to have_content("Nets")
+  end 
 end 

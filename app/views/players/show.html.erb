@@ -1,8 +1,11 @@
-<a href="/players">Player Index</a>
+<a href="/players">Player Show</a>
 
 <h1><%= @player.name %><h1>
 <p>Position: <%= @player.position %></p>
-<p>Age: <%= player.age%></p>
+<p>Age: <%= @player.age%></p>
 <p>Height: <%= @player.height %></p>
 <p>Injury status: <%= @player.injured %></p>
+
+<p><%= link_to "Update Player", edit_player_path(@player) %> </p>
+<%= button_to "Delete", url= "/players/#{@player.id}", method: :delete %>
 
