@@ -15,7 +15,10 @@
  */
 
 body {
-  background-color: rgb(204, 204, 204);
+  background-color: rgb(160, 179, 184);
 }
-
+hr {
+  color: rgb(128, 0, 0);
+  border: 10px solid rgb(112, 0, 0);
+}
 @import "rails_bootstrap_forms";

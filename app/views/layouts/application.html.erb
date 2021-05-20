@@ -8,10 +8,12 @@
     href=https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.20/css/dataTables.bootstrap4.min.css
     rel=stylesheet> <%= stylesheet_link_tag 'application', media: 'all' %> <%=
     javascript_include_tag 'application' %>
+    <link rel="icon" href="../../assets/images/ic_mountain.ico" />
+    <link rel="shortcut icon" href="../../assets/images/ic_mountain.ico" />
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">NBA Teams and Mountains</a>
         <button
@@ -70,8 +72,8 @@
     </nav>
     <div class="container">
       <% flash.each do |name, msg| %>
-      <div class="row justify-content-center">
-        <div class="col-auto alert alert-warning"><%= msg %></div>
+      <div class="row mr-auto">
+        <div class="col-lg alert alert-warning"><%= msg %></div>
       </div>
       <% end %>
       <div class="row justify-content-center">

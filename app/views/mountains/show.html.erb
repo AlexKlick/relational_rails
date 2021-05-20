@@ -1,17 +1,27 @@
-<h1 style="text-align: center"><%= @mountain.name%></h1>
-<%= button_to "Delete","/mountains/#{@mountain.id}", method: :delete, :class => "btn btn-danger" %>
-<table class="table table-sm table-bordered">
-  <tr>
-    <th scope="row" style="text-align: center">Height (M)</th>
-    <th scope="row" style="text-align: center">Skiable?</th>
-  </tr>
-  <tr>
-    <td style="text-align: center"><%= @mountain.height_m%></td>
-    <td
-      style="text-align: center"
-      class="<%= @mountain.skiable == true ? 'bg-success' : 'bg-danger' %>"
-    >
-      <%= @mountain.skiable%>
-    </td>
-  </tr>
-</table>
+<link href="custom.css" rel="stylesheet" />
+<div class="row">
+  <div class="col-lg-4" style="margin-top: 20px">
+    <div class="card text-center text-white bg-info">
+      <div class="card-header">
+        <img
+          class="card-img-top"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Bear_Digging_and_Denali_%2811330360484%29.jpg/1280px-Bear_Digging_and_Denali_%2811330360484%29.jpg
+        "
+          alt="Card image cap"
+        />
+        <h5 class="card-title"><%=@mountain.name%></h5>
+      </div>
+      <hr style="color: rgb(128, 0, 0)" />
+      <div class="card-body">
+        <p class="card-text">
+          Height (m): <%=@mountain.height_m %> <br />
+          Can it be skied? <br />
+          <%= @mountain.skiable == true ? " of course!" : " No way!" %>
+        </p>
+        <hr class="hr_style" />
+        <%= button_to "Delete","/mountains/#{@mountain.id}", method: :delete,
+        :class => "btn btn-danger" , data: { confirm: 'Are you sure?' }%>
+      </div>
+    </div>
+  </div>
+</div>
