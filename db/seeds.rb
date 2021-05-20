@@ -25,18 +25,31 @@ b_simmions = philly.players.create!(name: "Ben Simmons", position: "PG", age: 24
 
 #MountainRange.create(name: "Cascades",length_km: 1100, western_hemisphere: true, pic: 'https://en.wikipedia.org/wiki/File:Mount_Rainier_and_other_Cascades_mountains_poking_through_clouds.jpg')
 ranges = [["Cascades",1100,true,'https://en.wikipedia.org/wiki/File:Mount_Rainier_and_other_Cascades_mountains_poking_through_clouds.jpg'],
-["Rockies", ]
+["Rockies", 3000, true],
+["Himalayas", 2400, false]
 ]
 
-mountains = [['Mount Rainier', 4392, true, "Cascades", 'https://www.tehaleh.com/media/8070156/mt-rainier-paradise-1.png?format=jpeg'],
-["Mount Shasta", 4317, true,  "Cascades","https://www.gannett-cdn.com/presto/2018/12/29/PREN/92efef93-56d5-47db-9142-1ffeee5d37e6-beanbest_2018_12.jpg"],
-["Mount Hood", 3426, true,  "Cascades",'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Mount_Hood_reflected_in_Mirror_Lake%2C_Oregon.jpg/1024px-Mount_Hood_reflected_in_Mirror_Lake%2C_Oregon.jpg']
+mountains = [['Mount Rainier', 4392, true, "Cascades"],
+["Mount Shasta", 4317, true,  "Cascades"],
+["Mount Hood", 3426, true,  "Cascades"],
+["Mount Baker", 3286, true, "Cascades"],
+["Mount Adams", 3742, false, "Cascades"],
+[ "Mount Elbert", 4401, false , "Rockies"],
+[ "Mount Sneffels",4315 , true , "Rockies"],
+[ "Pikes Peak",4302, false , "Rockies"],
+[ "Grand Teton", 4198 , false , "Rockies"],
+[ "Wheeler Peak",4013 , false , "Rockies"],
+[ "Mount Everest", 8848 , true , "Himalayas"],
+[ "K2", 8611 , true, "Himalayas"],
+[ "Lhotse", 8516, false, "Himalayas"],
+[ "Makalu", 8485, false, "Himalayas"],
+[ "Nanga Parbat", 8126, true, "Himalayas"]
 ]
 
 ranges.each do |range|
-  MountainRange.create(name: range[0], length_km: range[1], western_hemisphere: range[2], pic: range[3])
+  MountainRange.create(name: range[0], length_km: range[1], western_hemisphere: range[2])
 end
 
 mountains.each do |mountain|
-  Mountain.create(name:mountain[0], height_m:mountain[1], skiable: mountain[2], mountain_range_id: MountainRange.where('name = ?', mountain[3])[0].id, pic: mountain[4])
+  Mountain.create(name:mountain[0], height_m:mountain[1], skiable: mountain[2], mountain_range_id: MountainRange.where('name = ?', mountain[3])[0].id)
 end
