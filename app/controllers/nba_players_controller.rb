@@ -19,13 +19,6 @@ class NbaPlayersController < ApplicationController
     @players = Player.find(params[:player_id])
   end
 
-  # def update
-  #   @nbateam = Nbateam.find(params[:nba_id])
-  #   @players = Player.find(params[:player_id])   
-  #   @players.update(player_params)
-  #   redirect_to "/nbateams/#{@}"
-  # end
-  
   private
   def player_params
     params.permit(:name, :position, :age, :height, :injured)

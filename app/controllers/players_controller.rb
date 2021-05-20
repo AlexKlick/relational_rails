@@ -1,10 +1,12 @@
 class PlayersController < ApplicationController
   def index
-    @players = Player.all    
+    @players = Player.all.injured
   end    
 
   def show
     @player = Player.find(params[:id])
+
+    #conditional (Params querey) 
   end
 
   def edit
@@ -18,8 +20,7 @@ class PlayersController < ApplicationController
   end
 
   def destroy
-    player = Player.find(params[:id])    
-    player.destroy
+    Player.destroy(params[:id])    
     redirect_to players_path
   end
 

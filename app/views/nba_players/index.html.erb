@@ -7,7 +7,7 @@
   <li>Age: <%= player.age %></li>
   <li>Height in inches: <%= player.height %></li>
   <li>Injury Status: <%= player.injured %></li>
-
+   <%= button_to "Delete", url= "/players/#{player.id}", method: :delete %>
 <% end %>
   
   <%= link_to "Create Player", new_nba_player_path(@nbateam) %>

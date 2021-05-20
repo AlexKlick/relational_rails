@@ -26,8 +26,7 @@ class NbateamsController < ApplicationController
   end
 
   def destroy
-    nbateam = Nbateam.find(params[:id])
-    nbateam.destroy
+    Nbateam.destroy(params[:id])
     redirect_to nbateams_path    
   end
   
@@ -35,9 +34,4 @@ class NbateamsController < ApplicationController
   def nbateam_params
     params.permit(:name, :city, :number_of_players, :playoff_ready)
   end 
-
-  # def roster
-  #   @nbateam = Nbateam.find(params[:id])
-  #   @player = Nbateam.where(nbateams_id: self.id)
-  # end
 end
