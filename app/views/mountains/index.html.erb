@@ -3,18 +3,26 @@
 <table class="table table-bordered">
   <tr>
     <th style="text-align: center">Name</th>
+    <th style="text-align: center">Edit</th>
     <th style="text-align: center">Height (M)</th>
     <th style="text-align: center">Skiable?</th>
+    <th style="text-align: center">delete</th>
   </tr>
   <% @mountains.each do |mountain| %>
   <tr>
-    <td style="text-align: center"><%= mountain.name%></td>
+    <td style="text-align: center"><%= link_to "#{mountain.name}", "/mountains/#{mountain.id}"%></td>
+    <td style="text-align: center">
+      <a id="edit<%=mountain.id%>" href="/mountains/<%=mountain.id%>/edit"></a>
+    </td>
     <td style="text-align: center"><%= mountain.height_m%></td>
     <td
       style="text-align: center"
       class="<%= mountain.skiable == true ? 'bg-success' : 'bg-danger' %>"
     >
       <%= mountain.skiable%>
+    </td>
+    <td style="text-align: center" id="delete<%=mountain.id%>">
+      <%= button_to "delete","/mountains/#{mountain.id}", method: :delete, :class => "btn btn-danger" %>
     </td>
   </tr>
   <% end %>

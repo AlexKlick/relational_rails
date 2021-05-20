@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_13_201304) do
+ActiveRecord::Schema.define(version: 2021_05_19_185404) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2021_05_13_201304) do
     t.boolean "western_hemisphere"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "pic"
   end
 
   create_table "mountains", force: :cascade do |t|
@@ -30,6 +31,7 @@ ActiveRecord::Schema.define(version: 2021_05_13_201304) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "mountain_range_id"
+    t.string "pic"
     t.index ["mountain_range_id"], name: "index_mountains_on_mountain_range_id"
   end
 
@@ -46,7 +48,7 @@ ActiveRecord::Schema.define(version: 2021_05_13_201304) do
     t.string "name"
     t.string "position"
     t.integer "age"
-    t.float "height"
+    t.integer "height"
     t.boolean "injured"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

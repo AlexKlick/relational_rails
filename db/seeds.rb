@@ -1,10 +1,7 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Nbateam.destroy_all
+Player.destroy_all
+MountainRange.destroy_all
+Mountain.destroy_all
 celtics = Nbateam.create!(name: "Celtics", city: "Boston", number_of_players: 17, playoff_ready: true)
 k_garrnet = celtics.players.create!(name: "Kevin Garrnet", position: "PF", age: 35, height: 83.0, injured: true)
 j_tatum = celtics.players.create!(name: "Jayson Tatum", position: "SF", age: 23, height: 80.0, injured: false) 
@@ -26,4 +23,20 @@ jojo = philly.players.create!(name: "Joel Embid", position: "C", age: 27, height
 b_simmions = philly.players.create!(name: "Ben Simmons", position: "PG", age: 24, height: 82.0, injured: false)
 
 
+#MountainRange.create(name: "Cascades",length_km: 1100, western_hemisphere: true, pic: 'https://en.wikipedia.org/wiki/File:Mount_Rainier_and_other_Cascades_mountains_poking_through_clouds.jpg')
+ranges = [["Cascades",1100,true,'https://en.wikipedia.org/wiki/File:Mount_Rainier_and_other_Cascades_mountains_poking_through_clouds.jpg'],
+["Rockies", ]
+]
 
+mountains = [['Mount Rainier', 4392, true, "Cascades", 'https://www.tehaleh.com/media/8070156/mt-rainier-paradise-1.png?format=jpeg'],
+["Mount Shasta", 4317, true,  "Cascades","https://www.gannett-cdn.com/presto/2018/12/29/PREN/92efef93-56d5-47db-9142-1ffeee5d37e6-beanbest_2018_12.jpg"],
+["Mount Hood", 3426, true,  "Cascades",'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Mount_Hood_reflected_in_Mirror_Lake%2C_Oregon.jpg/1024px-Mount_Hood_reflected_in_Mirror_Lake%2C_Oregon.jpg']
+]
+
+ranges.each do |range|
+  MountainRange.create(name: range[0], length_km: range[1], western_hemisphere: range[2], pic: range[3])
+end
+
+mountains.each do |mountain|
+  Mountain.create(name:mountain[0], height_m:mountain[1], skiable: mountain[2], mountain_range_id: MountainRange.where('name = ?', mountain[3])[0].id, pic: mountain[4])
+end
