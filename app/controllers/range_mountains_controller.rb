@@ -2,7 +2,14 @@ class RangeMountainsController < ApplicationController
 
     def index
         @range = MountainRange.find(params[:mountain_range_id])
-        @mountains = @range.mountains
+        if params[:sort_name] == nil || params[:sort_name] == 'desc'
+            @mountains = @range.mountains.order(name: :asc)
+        else
+            @mountains = @range.mountains.order(name: :desc)
+        end
+        if params[:height] != nil 
+          @mountains = @mountains.where('height_m > ?', params[:height])
+        end
     end
 
     def new

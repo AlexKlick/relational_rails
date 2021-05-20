@@ -1,4 +1,5 @@
 <h1 style="text-align: center"><%= @mountain.name%></h1>
+<%= button_to "Delete","/mountains/#{@mountain.id}", method: :delete, :class => "btn btn-danger" %>
 <table class="table table-sm table-bordered">
   <tr>
     <th scope="row" style="text-align: center">Height (M)</th>

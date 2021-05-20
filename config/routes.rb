@@ -29,14 +29,18 @@ Rails.application.routes.draw do
   #edit a range
   get '/mountain_ranges/:id/edit', to: 'mountain_ranges#edit'
   patch '/mountain_ranges/:id', to: 'mountain_ranges#update'
+  #delete a range
+  delete '/mountain_ranges/:id', to: 'mountain_ranges#delete'
   #mountains in a range
-  get "/mountain_ranges/:mountain_range_id/mountains", to: 'range_mountains#index', as: :mountains_in_range
+  get "/mountain_ranges/:mountain_range_id/mountains", to: 'range_mountains#index', as: :mountains_range
   #add new mountain to range
-  get "/mountain_ranges/:mountain_range_id/mountains/new", to: 'range_mountains#new'
+  match "/mountain_ranges/:mountain_range_id/mountains/new", to: 'range_mountains#new', :via => :get
   post "/mountain_ranges/:mountain_range_id/mountains", to: 'range_mountains#create'
   #edit mountain in range
   get "/mountain_ranges/:mountain_range_id/mountains/:mountain_id/edit", to: 'range_mountains#edit'
   patch "/mountain_ranges/:mountain_range_id/mountains/:mountain_id", to: 'range_mountains#update'
+
+
   #create mountain
   get '/mountains/new', to: 'mountains#new'
   post '/mountains', to: 'mountains#create'
@@ -45,6 +49,8 @@ Rails.application.routes.draw do
   #read single mountain
   get '/mountains/:id', to: 'mountains#show'
   #edit single mountain
-  get '/mountains/:id/edit', to: 'mountains#edit', as: :edit_mountain
+  get '/mountains/:id/edit', to: 'mountains#edit'
   patch '/mountains/:id', to: 'mountains#update'
+  #delete a mountain
+  delete '/mountains/:id', to: 'mountains#delete'
 end
