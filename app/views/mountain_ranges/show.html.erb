@@ -1,0 +1,23 @@
+<h1 style="text-align: center"><%= @range.name %> Mountain Range</h1>
+<div class="btn-group" role="group">
+  <a class="btn btn-primary" href="/mountain_ranges/<%= @range.id %>/mountains">see the mountains!</a>
+  <%= button_to "Delete","/mountain_ranges/#{@range.id}", method: :delete, :class => "btn btn-danger" %>
+  <a class="btn btn-secondary" href="/mountain_ranges/<%= @range.id %>/edit">Update Range</a>
+  <a class="btn btn-secondary" href="/mountain_ranges/<%=@range.id %>/mountains/new">Create Mountain</a>
+</div>
+<h3>Mountains in range: <%= @mtn_count %></a></h3>
+<table class="table table-sm table-bordered">
+  <tr>
+    <th scope="row" style="text-align: center">Length</th>
+    <th scope="row" style="text-align: center">In Western Hemisphere?</th>
+  </tr>
+  <tr>
+    <td style="text-align: center"><%= @range.length_km%></td>
+    <td
+      style="text-align: center"
+      class="<%= @range.western_hemisphere == true ? 'bg-success' : 'bg-danger' %>"
+    >
+      <%= @range.western_hemisphere%>
+    </td>
+  </tr>
+</table>

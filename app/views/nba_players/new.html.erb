@@ -1,0 +1,17 @@
+<h1> New NBA Player </h1>
+
+<!-- <%= render partial: "player_form", locals: {model: @player, url: nba_players_path(@nbateam)} %> -->
+
+<%= form_with url: nba_players_path(@nbateam), method: :post, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %> 
+  <%= form.label :position %>
+  <%= form.text_field :position %>
+  <%= form.label :age %>
+  <%= form.number_field :age %>
+  <%= form.label :height %>
+  <%= form.text_field :height %>
+  <%= form.label :injured %>
+  <%= form.text_field :injured %>
+  <%= form.submit "Submit" %>
+<% end %>

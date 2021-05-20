@@ -1,0 +1,33 @@
+<h1 style="text-align: center">Mountains of the <%= @range.name %></h1>
+<p>
+  <button class="btn btn-light"><%= link_to "sort alpha", mountains_range_path(params:{sort_name: params[:sort_name] == "asc" ? "desc" : "asc"}) %></button>
+</p>
+<input class="form-control" type="number" onkeyup="height_input()" id="name">
+<a class="btn btn-primary" id="demo" value="wtfcapybara" href="">input a number to filter by height greater than it</a>
+<table class="table table-bordered">
+  <tr>
+    <th style="text-align: center">Name</th>
+    <th style="text-align: center">Height (M)</th>
+    <th style="text-align: center">Skiable?</th>
+  </tr>
+  <% @mountains.each do |mountain| %>
+  <tr>
+    <td id="<%=mountain.name%>" style="text-align: center"><%= link_to "#{mountain.name}", "/mountains/#{mountain.id}"%> <a id="edit<%=mountain.id%>" href="/mountain_ranges/<%= @range.id%>/mountains/<%= mountain.id %>/edit">edit</a></td>
+    <td style="text-align: center"><%= mountain.height_m%></td>
+    <td
+      style="text-align: center"
+      class="<%= mountain.skiable == true ? 'bg-success' : 'bg-danger' %>"
+    >
+      <%= mountain.skiable%>
+    </td>
+  </tr>
+  <% end %>
+</table> 
+<script>
+function height_input() {
+  var x = document.getElementById("name").value;
+  let button = document.getElementById("demo")
+  button.textContent = "Select Mountains with height greater than: "+ x + " meters";
+  document.getElementById('demo').setAttribute('href', '/mountain_ranges/<%=@range.id %>/mountains/?height=' + x);
+}
+</script>

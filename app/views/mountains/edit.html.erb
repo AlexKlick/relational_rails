@@ -1,0 +1,10 @@
+<h1>Update <%= @mountain.name %></h1>
+<%= bootstrap_form_tag url: "/mountains/#{@mountain.id}", method: :patch do |form| %>
+    <%= form.text_field :mountain_name, value: @mountain.name %>
+    <%= form.number_field :height_m, value: @mountain.height_m %>
+    <%= form.form_group :skiable, label: { text: "Can it be skied?" }, value: @mountain.skiable do %>
+        <%= form.radio_button :skiable, true, label:"true", checked: @mountain.skiable ? true : false %>
+        <%= form.radio_button :skiable, false, label:"false", checked: @mountain.skiable ? false : true%>
+    <% end %>
+    <%= form.submit 'Submit' %>
+<% end %>

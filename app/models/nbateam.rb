@@ -1,3 +1,4 @@
-class Nbateam < ApplicationRecord
-    has_many :players
+class Nbateam < ApplicationRecord 
+#     validates_presence_of :name, :city, :number_of_players, :playoff_ready
+    has_many :players, dependent: :destroy 
 end
