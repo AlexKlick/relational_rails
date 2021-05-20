@@ -1,7 +1,5 @@
 <h1>Nba Teams</h1>
-<%# <a href="nbateams/new"> Create NBA Team </a> %>
-<h3><%= link_to "Create NBA Team", nbateams_new_path %></h3>
-
+<h3><%= link_to "Create NBA Team", new_nbateam_path %></h3>
 <% @nbateams.each do |nbateam| %>
 <h3><%= nbateam.city%>  <%= nbateam.name %></h3> 
 <p>Roster Size: <%= nbateam.number_of_players %></p>

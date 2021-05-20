@@ -11,7 +11,7 @@ class NbateamsController < ApplicationController
   end
 
   def create 
-    nbateam = Nbateam.create(nbateam_params)
+    nbateam = Nbateam.create!(nbateam_params)
     redirect_to "/nbateams"
   end 
   

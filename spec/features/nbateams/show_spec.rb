@@ -7,7 +7,7 @@ RSpec.describe 'As a visitor', type: :feature do
         end
         # User Story 2
         it 'I see the Nba team with that id including the  attributes:' do
-            visit nbateam_path(@celtics)
+            visit nba_show_path(@celtics)
             
             expect(page).to have_content(@celtics.name)
             expect(page).to have_content(@celtics.city)

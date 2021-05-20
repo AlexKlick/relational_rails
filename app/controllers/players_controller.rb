@@ -1,12 +1,10 @@
 class PlayersController < ApplicationController
   def index
-    @players = Player.all.injured
+    @players = Player.injured
   end    
 
   def show
     @player = Player.find(params[:id])
-
-    #conditional (Params querey) 
   end
 
   def edit

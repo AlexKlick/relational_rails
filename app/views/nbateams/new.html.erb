@@ -1,4 +1,6 @@
-<%= form_with url: '/nbateams', method: :post, local: true do |form| %>
+<h1> New Team </h1>
+
+<%= form_with url: nbateams_path, method: :post, local: true do |form| %>
   <%= form.label :name %>
   <%= form.text_field :name %> 
 
@@ -11,5 +13,5 @@
   <%= form.label :playoff_ready %>
   <%= form.text_field :playoff_ready %>
 
-  <%= form.submit "Create NBA Team" %>
+  <%= form.submit "Submit" %>
 <% end %>
